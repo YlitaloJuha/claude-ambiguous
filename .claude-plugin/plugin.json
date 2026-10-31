@@ -13,5 +13,6 @@
     "claude-mods",
     "function-hooks",
     "mod"
-  ]
+  ],
+  "license": "MIT"
 }
