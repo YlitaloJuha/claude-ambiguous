@@ -13,7 +13,7 @@
 
 <p align="center"><sub>Only this mod enabled, in a real terminal session: the prompt names two bugs and asks to fix "the bug".</sub></p>
 
-"Just fix the bug", when there are two. A fast model reads each prompt beside the main turn and tells you what is unclear and how it would read it. Your prompt is never held up.
+"Just fix the bug", when there are two. A fast model reads each prompt beside the main turn and tells you what is unclear and how it would read it. Your prompt does not wait for it.
 
 ## Install
 
@@ -36,10 +36,10 @@ In the desktop app, click + next to the prompt box, then Plugins, Add marketplac
 
 ## What it does
 
-- **Never in the way:** The check runs beside the turn. Nothing waits for it.
+- **Beside the turn:** The check runs next to the turn, so the turn does not wait for it.
 - **Uses the context:** A short prompt is not flagged just for being short. If the conversation settles it, nothing shows.
 - **Three answers:** **Tell Claude** passes the reading to the running turn, or fills the prompt box when idle. **Clarify** starts your own sentence. **Dismiss** clears it.
-- **Nothing reaches Claude unasked:** The verdict stays on your screen until you press something.
+- **Stays on your screen:** The verdict stays on your screen until you press something.
 
 ## Commands
 
@@ -70,9 +70,14 @@ claude plugin test .
 claude --plugin-dir .
 ```
 
+## Make it yours
+
+Once it is loaded, ask your own Claude to fit it to how you work, for example to change the score cutoff, or what counts as unclear for you. The code is in `hooks/register.tsx`, and the license allows changes. Keep your version in a fork, so an update does not replace it. What you change is yours to check.
+
 ## Credits
 
-- The "untrusted reply" prompt pattern follows [reflect-mod](https://github.com/BayramAnnakov/claude-reflect) by Bayram Annakov (MIT).
+- The "untrusted reply" prompt pattern and small helpers (finding the last reply, pulling JSON out of a model answer) follow [reflect-mod](https://github.com/BayramAnnakov/claude-reflect) by Bayram Annakov (MIT).
+- The list of prompt origins no person sent comes from [cache-tax](https://github.com/karanb192/cache-tax) by Karan Bansal (MIT).
 
 ## Try other mods together
 
@@ -83,3 +88,7 @@ This mod works on its own, and it also works side by side with my other Claude C
 [MIT](LICENSE). `THIRD_PARTY_LICENSES.md` covers the parts that came from other projects.
 
 Provided **as is, with no warranty of any kind**. You use it at your own risk, and the author is not liable for anything that results from using it, including lost work, usage charges or changes to your code.
+
+**It may break.** It relies on how Claude Code works today, and has been tested on version 2.1.292. It may stop working after a future update if Anthropic changes things.
+
+This is an independent, unofficial project. It is not affiliated with, endorsed by or supported by Anthropic.
