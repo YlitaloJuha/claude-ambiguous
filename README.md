@@ -8,9 +8,9 @@
   <img alt="tests: 11 passing" src="https://img.shields.io/badge/tests-11%20passing-2ea44f?style=flat-square">
 </p>
 
-<p align="center"><img src="docs/usage.svg" alt="The ambiguity check flagging a prompt in a real terminal session" width="860"></p>
+<p align="center"><img src="docs/usage.svg" alt="ambiguous alone, flagging a prompt in a real terminal session" width="860"></p>
 
-<p align="center"><sub>A real terminal session: the prompt names two bugs and asks to fix "the bug".</sub></p>
+<p align="center"><sub>Only this mod enabled, in a real terminal session: the prompt names two bugs and asks to fix "the bug".</sub></p>
 
 "Just fix the bug", when there are two. A fast model reads each prompt beside the main turn and tells you what is unclear and how it would read it. Your prompt is never held up.
 
