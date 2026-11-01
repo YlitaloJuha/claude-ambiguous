@@ -4,8 +4,8 @@
 
 <p align="center">
   <img alt="type: Claude Code mod" src="https://img.shields.io/badge/type-Claude%20Code%20mod-6f42c1?style=flat-square">
-  <img alt="tested on: Claude Code 2.1.292" src="https://img.shields.io/badge/tested%20on-Claude%20Code%202.1.292-D97757?style=flat-square">
-  <img alt="tests: 11 passing" src="https://img.shields.io/badge/tests-11%20passing-2ea44f?style=flat-square">
+  <img alt="tested on: Claude Code 2.1.309" src="https://img.shields.io/badge/tested%20on-Claude%20Code%202.1.309-D97757?style=flat-square">
+  <img alt="tests: 12 passing" src="https://img.shields.io/badge/tests-12%20passing-2ea44f?style=flat-square">
   <img alt="license: MIT" src="https://img.shields.io/badge/license-MIT-555?style=flat-square">
 </p>
 
@@ -30,9 +30,6 @@ claude plugin install ambiguous --marketplace YlitaloJuha/claude-ambiguous
 ```
 
 In the desktop app, click + next to the prompt box, then Plugins, Add marketplace with `YlitaloJuha/claude-ambiguous`, then Add plugin.
-
-> [!NOTE]
-> This repository is private for now. Installing needs read access and a GitHub credential on your machine, such as `gh auth login` then `gh auth setup-git`.
 
 ## What it does
 
@@ -61,6 +58,8 @@ No network, no shell commands and no file access through the mod API. The prompt
 
 - Verdicts vary. The same prompt scored 0.95 and 0.75 in two runs, and once showed no row. Anything under 0.7 is dropped.
 - Claude has already started by the time the row appears, so a late answer can land mid-work.
+- Tell Claude has been pressed in a real session during a running turn. Pressing it when idle, Clarify and Dismiss have only been checked in tests.
+- Claude Code draws the band above the prompt only in the terminal and the desktop app, so what this mod draws there does not show in VS Code or on mobile.
 
 ## Develop
 
@@ -89,6 +88,6 @@ This mod works on its own, and it also works side by side with my other Claude C
 
 Provided **as is, with no warranty of any kind**. You use it at your own risk, and the author is not liable for anything that results from using it, including lost work, usage charges or changes to your code.
 
-**It may break.** It relies on how Claude Code works today, and has been tested on version 2.1.292. It may stop working after a future update if Anthropic changes things.
+**It may break.** It relies on how Claude Code works today, and has been tested on versions 2.1.292 and 2.1.309. It may stop working after a future update if Anthropic changes things.
 
 This is an independent, unofficial project. It is not affiliated with, endorsed by or supported by Anthropic.

@@ -143,6 +143,18 @@ test('Dismiss and the next prompt clear the row', async ($, on) => {
   expect(await ui.find({ type: 'Text', text: /Ambiguous/ })).toBeUndefined()
 })
 
+test('Clarify clears the row and starts a sentence in the prompt box', async ($, on) => {
+  const clock = mock.clock(on)
+  const w = world(on)
+  await $.session.start(session)
+  const ui = await $.ui.mount(mount)
+  await $.prompt.submit(typed('fix it'))
+  await clock.advance(1)
+  await ui.press({ key: 'ambiguous-clarify' })
+  expect(w.fills).toEqual(['By that I meant: '])
+  expect(await ui.find({ type: 'Text', text: /Ambiguous/ })).toBeUndefined()
+})
+
 test('/ambiguous off stops the checks', async ($, on) => {
   const clock = mock.clock(on)
   const w = world(on)
